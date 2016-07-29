@@ -7,6 +7,7 @@
     = f.input :password, autocomplete: 'off', hint: t('devise.registration.hint_password'), required: false
     = f.input :password_confirmation, required: false
     = f.input :current_password, hint: t('devise.registration.hint_current_password'), required: true
+    
   .form-actions
     = f.button :submit, t('btn.update'), class: 'btn btn-primary'
 = link_to t('btn.back'), :back
