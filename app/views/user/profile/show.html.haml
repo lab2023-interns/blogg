@@ -8,8 +8,17 @@
     = t('tt.show', resource_name: User.model_name.human)
   .panel-body
     = show_for @profile do |s|
+      = s.attribute :id
       = s.attribute :name
       = s.attribute :surname
       = s.attribute :email
+      = s.attribute :time_zone
       = s.attribute :created_at
       = s.attribute :updated_at
+  .panel-footer
+    =link_to root_path, class: 'btn btn-large' do
+      %i.fa.fa-arrow-left
+      Geri dön
+    =link_to edit_user_profile_path(@profile), class: 'btn btn-large' do
+      %i.fa.fa-pencil
+      Profil bilgilerini güncelle
